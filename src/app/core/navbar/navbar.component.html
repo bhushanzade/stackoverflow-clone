@@ -1,0 +1,45 @@
+<nav class="navbar sticky-top navbar-expand-sm navbar-light bg-light">
+    <a routerLink="/" class="-logo js-gps-track">
+        <span class="-img _glyph">Stack Overflow</span>
+    </a>
+    <button class="navbar-toggler d-lg-none" type="button" data-toggle="collapse" data-target="#collapsibleNavId"
+        aria-controls="collapsibleNavId" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="collapsibleNavId">
+        <app-search-bar></app-search-bar>
+    </div>
+</nav>
+
+<div class="popover-input" *ngIf="popover">
+    <div class="row">
+        <div class="col-6">
+            <p>
+                [tag]
+                <span class="ml-1 tsl">
+                    search within a tag
+                </span>
+            </p>
+            <p>
+                "words here"
+                <span class="ml-1 tsl">
+                    exact phrase
+                </span>
+            </p>
+        </div>
+        <div class="col-6">
+            <p>
+                answers:0
+                <span class="ml-1 tsl">
+                    unanswered questions
+                </span>
+            </p>
+            <p>
+                isaccepted:yes
+                <span class="ml-1 tsl">
+                    search within status
+                </span>
+            </p>
+        </div>
+    </div>
+</div>

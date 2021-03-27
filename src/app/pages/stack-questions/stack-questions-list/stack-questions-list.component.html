@@ -1,0 +1,114 @@
+<div class="row">
+    <div class="col-8">
+        <div class="">
+            <div class="content">
+                <div class="section-title">
+                    <h3>All Questions</h3>
+                </div>
+                <div class="tags mt-4" *ngIf="taggedRoute">
+                    Tagged with &nbsp; <a class="post-tag" *ngFor="let tag of searchedTags">{{tag}}</a>
+                </div>
+                <div class="section-filter mt-4">
+                    <ul class="navbar-items float-right">
+                        <li [ngClass]="{'selected':tab === 'creation'}"> <a (click)="onChangeTab('creation')">Newest</a>
+                        </li>
+                        <li [ngClass]="{'selected':tab === 'activity'}"> <a (click)="onChangeTab('activity')">Active</a>
+                        </li>
+                        <li [ngClass]="{'selected':tab === 'votes'}"> <a (click)="onChangeTab('votes')">Votes</a> </li>
+                        <li> <a>More</a> </li>
+                    </ul>
+                    <p style="font-size: 1.30769231rem; margin-right: 12px; ">{{totalCnt}} questions</p>
+                </div>
+                <hr>
+                <div class="no-items" *ngIf="totalCnt === 0">
+                    <h1>No Results Avaialable. Please try again.</h1>
+                </div>
+                <div class="questions"
+                    *ngFor="let item of allItems | paginate: {itemsPerPage: pageSize, currentPage: pageNo,totalItems: totalCnt} ; let i=index">
+                    <div class="row">
+                        <div class="col-1">
+                            <div class="qcnt">{{(item.up_vote_count ? item.up_vote_count : 0) - (item.down_vote_count ?
+                                item.down_vote_count : 0)}}</div>
+                            <div class="ctitl">Votes</div>
+                            <div class="qcnt mt-3">{{item.answer_count}}</div>
+                            <div class="ctitl">Answers</div>
+                            <div class="ctitl mt-3">{{item.view_count | numberConvert}} Views</div>
+                        </div>
+                        <div class="col-11">
+                            <div class="qtitle">
+                                <a [routerLink]="['./',item.question_id]">{{item.title}}</a>
+                            </div>
+                            <div class="qdesc">
+                                {{item.body | ellipsis}}
+                            </div>
+                            <div class="tags-info">
+                                <div class="row">
+                                    <div class="col-8">
+                                        <div class="tags">
+                                            <a class="post-tag" *ngFor="let tag of item.tags">{{tag}}</a>
+                                        </div>
+                                    </div>
+                                    <div class="col-4">
+                                        <div class="strtime"> {{item.creation_date | timelapse}}</div>
+                                        <div class="d-flex">
+                                            <div class="ppic">
+                                                <img [src]="item.owner.profile_image ? item.owner.profile_image : 'https://lh3.googleusercontent.com/-XdUIqdMkCWA/AAAAAAAAAAI/AAAAAAAAAAA/4252rscbv5M/photo.jpg?sz=32'"
+                                                    alt="item.owner.display_name">
+                                            </div>
+                                            <div class="binfo">
+                                                <a href="">{{item.owner.display_name}}</a>
+                                                <div class="flair">
+                                                    <span *ngIf="item.owner.reputation" class="reputation-score"
+                                                        title="reputation score " dir="ltr">{{item.owner.reputation |
+                                                        numberConvert}}</span>
+                                                    <ng-container *ngIf="item.owner.badge_counts">
+                                                        <span title="1 gold badge" aria-hidden="true"
+                                                            *ngIf="item.owner.badge_counts.gold > 0">
+                                                            <span class="badge1"></span>
+                                                            <span
+                                                                class="badgecount">{{item.owner.badge_counts?.gold}}</span>
+                                                        </span>
+                                                        <span title="2 silver badges" aria-hidden="true"
+                                                            *ngIf="item.owner.badge_counts.silver > 0">
+                                                            <span class="badge2"></span>
+                                                            <span
+                                                                class="badgecount">{{item.owner.badge_counts?.silver}}</span>
+                                                        </span>
+                                                        <span title="15 bronze badges" aria-hidden="true"
+                                                            *ngIf="item.owner.badge_counts.bronze > 0">
+                                                            <span class="badge3"></span>
+                                                            <span
+                                                                class="badgecount">{{item.owner?.badge_counts?.bronze}}</span>
+                                                        </span>
+                                                    </ng-container>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <br>
+                <div class="paged" style="margin: 0 -40px;" *ngIf="totalCnt > 0">
+                    <div class="page-sizes float-right">
+                        <span class="ml-2 float-right">per page</span>
+                        <ul class="float-left">
+                            <li (click)="pageSizeChanged(15)" [ngClass]="{'current':pageSize == 15}">15</li>
+                            <li (click)="pageSizeChanged(30)" [ngClass]="{'current':pageSize == 30}">30</li>
+                            <li (click)="pageSizeChanged(50)" [ngClass]="{'current':pageSize == 50}">50</li>
+                        </ul>
+                    </div>
+                    <pagination-controls (pageChange)="pageChanged($event)" maxSize="9" autoHide="true"
+                        responsive="true" previousLabel="Prev" nextLabel="Next" screenReaderPaginationLabel="Pagination"
+                        screenReaderPageLabel="page" screenReaderCurrentLabel="You're on page">
+                    </pagination-controls>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="col-4">
+        <app-right-sidebar></app-right-sidebar>
+    </div>
+</div>

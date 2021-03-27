@@ -1,0 +1,25 @@
+<div class="post-comments">
+    <div class="comment-body mt-2" *ngFor="let item of comments">
+        <div class="d-flex">
+            <div style="margin-top: 5px; margin-right: 10px; color: #6a737c; font-size: 14px;">
+                {{item.score}}
+            </div>
+            <div style="color: #d6d9dc;">
+                <div>
+                    <i class="fa fa-caret-up" style="color: #d6d9dc; font-size: 26px;"></i>
+                </div>
+                <div>
+                    <i class="fa fa-flag"></i>
+                </div>
+            </div>
+            <p>
+                <span [innerHtml]="item.body | safeHtml"></span>
+                <span> – <span class="cauthor">{{item.owner.display_name}}</span> <span
+                        class="cdate">{{item.creation_date | timelapse}}</span></span>
+            </p>
+        </div>
+    </div>
+    <div class="comment-body mt-2 pt-2">
+        <p style="color:#9199a1; font-size:14px;">Add Comment</p>
+    </div>
+</div>

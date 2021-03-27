@@ -1,0 +1,306 @@
+{
+    "items": [
+        {
+            "tags": [
+                "java",
+                "c++",
+                "performance",
+                "optimization",
+                "branch-prediction"
+            ],
+            "owner": {
+                "reputation": 455042,
+                "user_id": 87234,
+                "user_type": "registered",
+                "accept_rate": 100,
+                "profile_image": "https://i.stack.imgur.com/FkjBe.png?s=128&g=1",
+                "display_name": "GManNickG",
+                "link": "https://stackoverflow.com/users/87234/gmannickg"
+            },
+            "is_answered": true,
+            "view_count": 1585424,
+            "protected_date": 1399067470,
+            "accepted_answer_id": 11227902,
+            "answer_count": 25,
+            "score": 25339,
+            "last_activity_date": 1611741816,
+            "creation_date": 1340805096,
+            "last_edit_date": 1611521897,
+            "question_id": 11227809,
+            "content_license": "CC BY-SA 4.0",
+            "link": "https://stackoverflow.com/questions/11227809/why-is-processing-a-sorted-array-faster-than-processing-an-unsorted-array",
+            "title": "Why is processing a sorted array faster than processing an unsorted array?"
+        },
+        {
+            "tags": [
+                "git",
+                "version-control",
+                "git-commit",
+                "undo"
+            ],
+            "owner": {
+                "reputation": 47565,
+                "user_id": 89904,
+                "user_type": "registered",
+                "accept_rate": 65,
+                "profile_image": "https://www.gravatar.com/avatar/4fef65cead13e5d519f6bce3c501a537?s=128&d=identicon&r=PG",
+                "display_name": "Hamza Yerlikaya",
+                "link": "https://stackoverflow.com/users/89904/hamza-yerlikaya"
+            },
+            "is_answered": true,
+            "view_count": 9371287,
+            "protected_date": 1370840488,
+            "accepted_answer_id": 927386,
+            "answer_count": 90,
+            "community_owned_date": 1363428511,
+            "score": 22403,
+            "last_activity_date": 1611002889,
+            "creation_date": 1243620554,
+            "last_edit_date": 1604378399,
+            "question_id": 927358,
+            "content_license": "CC BY-SA 4.0",
+            "link": "https://stackoverflow.com/questions/927358/how-do-i-undo-the-most-recent-local-commits-in-git",
+            "title": "How do I undo the most recent local commits in Git?"
+        },
+        {
+            "tags": [
+                "git",
+                "version-control",
+                "git-branch",
+                "git-push",
+                "git-remote"
+            ],
+            "owner": {
+                "reputation": 395682,
+                "user_id": 95592,
+                "user_type": "registered",
+                "accept_rate": 77,
+                "profile_image": "https://i.stack.imgur.com/utY5u.jpg?s=128&g=1",
+                "display_name": "Matthew Rankin",
+                "link": "https://stackoverflow.com/users/95592/matthew-rankin"
+            },
+            "is_answered": true,
+            "view_count": 8688258,
+            "protected_date": 1358718496,
+            "accepted_answer_id": 2003515,
+            "answer_count": 39,
+            "score": 17786,
+            "last_activity_date": 1613397430,
+            "creation_date": 1262653935,
+            "last_edit_date": 1605815850,
+            "question_id": 2003505,
+            "content_license": "CC BY-SA 4.0",
+            "link": "https://stackoverflow.com/questions/2003505/how-do-i-delete-a-git-branch-locally-and-remotely",
+            "title": "How do I delete a Git branch locally and remotely?"
+        },
+        {
+            "tags": [
+                "git",
+                "version-control",
+                "git-pull",
+                "git-fetch"
+            ],
+            "owner": {
+                "reputation": 253047,
+                "user_id": 6068,
+                "user_type": "registered",
+                "accept_rate": 65,
+                "profile_image": "https://www.gravatar.com/avatar/931970b8dc51b72e05e3a12b88612d61?s=128&d=identicon&r=PG",
+                "display_name": "pupeno",
+                "link": "https://stackoverflow.com/users/6068/pupeno"
+            },
+            "is_answered": true,
+            "view_count": 2927331,
+            "protected_date": 1362879044,
+            "accepted_answer_id": 292359,
+            "answer_count": 38,
+            "score": 12416,
+            "last_activity_date": 1615848086,
+            "creation_date": 1226742669,
+            "last_edit_date": 1606492916,
+            "question_id": 292357,
+            "content_license": "CC BY-SA 4.0",
+            "link": "https://stackoverflow.com/questions/292357/what-is-the-difference-between-git-pull-and-git-fetch",
+            "title": "What is the difference between &#39;git pull&#39; and &#39;git fetch&#39;?"
+        },
+        {
+            "tags": [
+                "python",
+                "iterator",
+                "generator",
+                "yield",
+                "coroutine"
+            ],
+            "owner": {
+                "reputation": 124289,
+                "user_id": 18300,
+                "user_type": "registered",
+                "accept_rate": 92,
+                "profile_image": "https://i.stack.imgur.com/jcyI4.jpg?s=128&g=1",
+                "display_name": "Alex. S.",
+                "link": "https://stackoverflow.com/users/18300/alex-s"
+            },
+            "is_answered": true,
+            "view_count": 2460826,
+            "protected_date": 1360547307,
+            "accepted_answer_id": 231855,
+            "answer_count": 38,
+            "score": 10986,
+            "last_activity_date": 1615121977,
+            "creation_date": 1224800471,
+            "last_edit_date": 1582751053,
+            "question_id": 231767,
+            "content_license": "CC BY-SA 4.0",
+            "link": "https://stackoverflow.com/questions/231767/what-does-the-yield-keyword-do",
+            "title": "What does the &quot;yield&quot; keyword do?"
+        },
+        {
+            "tags": [
+                "json",
+                "http-headers",
+                "content-type"
+            ],
+            "owner": {
+                "reputation": 213417,
+                "user_id": 12870,
+                "user_type": "registered",
+                "accept_rate": 63,
+                "profile_image": "https://www.gravatar.com/avatar/f0af40756420859b5b63cbceb6d30505?s=128&d=identicon&r=PG",
+                "display_name": "Oli",
+                "link": "https://stackoverflow.com/users/12870/oli"
+            },
+            "is_answered": true,
+            "view_count": 3068446,
+            "protected_date": 1435276338,
+            "accepted_answer_id": 477819,
+            "answer_count": 36,
+            "score": 10626,
+            "last_activity_date": 1607845841,
+            "creation_date": 1232897119,
+            "last_edit_date": 1556823229,
+            "question_id": 477816,
+            "content_license": "CC BY-SA 4.0",
+            "link": "https://stackoverflow.com/questions/477816/what-is-the-correct-json-content-type",
+            "title": "What is the correct JSON content type?"
+        },
+        {
+            "tags": [
+                "git"
+            ],
+            "owner": {
+                "reputation": 133065,
+                "user_id": 14069,
+                "user_type": "registered",
+                "accept_rate": 72,
+                "profile_image": "https://www.gravatar.com/avatar/0c29cc6ee1c170810ee1fd36fa7c2f95?s=128&d=identicon&r=PG",
+                "display_name": "paxos1977",
+                "link": "https://stackoverflow.com/users/14069/paxos1977"
+            },
+            "is_answered": true,
+            "view_count": 3556853,
+            "protected_date": 1359649207,
+            "accepted_answer_id": 348234,
+            "answer_count": 37,
+            "score": 9611,
+            "last_activity_date": 1614775796,
+            "creation_date": 1228687066,
+            "last_edit_date": 1611663798,
+            "question_id": 348170,
+            "content_license": "CC BY-SA 4.0",
+            "link": "https://stackoverflow.com/questions/348170/how-do-i-undo-git-add-before-commit",
+            "title": "How do I undo &#39;git add&#39; before commit?"
+        },
+        {
+            "tags": [
+                "c++",
+                "c",
+                "operators",
+                "code-formatting",
+                "standards-compliance"
+            ],
+            "owner": {
+                "reputation": 455042,
+                "user_id": 87234,
+                "user_type": "registered",
+                "accept_rate": 100,
+                "profile_image": "https://i.stack.imgur.com/FkjBe.png?s=128&g=1",
+                "display_name": "GManNickG",
+                "link": "https://stackoverflow.com/users/87234/gmannickg"
+            },
+            "is_answered": true,
+            "view_count": 844769,
+            "protected_date": 1297320482,
+            "accepted_answer_id": 1642035,
+            "answer_count": 26,
+            "community_owned_date": 1262233068,
+            "score": 9322,
+            "last_activity_date": 1615583493,
+            "creation_date": 1256799465,
+            "last_edit_date": 1613061242,
+            "question_id": 1642028,
+            "content_license": "CC BY-SA 4.0",
+            "link": "https://stackoverflow.com/questions/1642028/what-is-the-operator-in-c-c",
+            "title": "What is the &quot;--&gt;&quot; operator in C/C++?"
+        },
+        {
+            "tags": [
+                "javascript",
+                "arrays"
+            ],
+            "owner": {
+                "reputation": 102267,
+                "user_id": 364969,
+                "user_type": "registered",
+                "accept_rate": 86,
+                "profile_image": "https://www.gravatar.com/avatar/79e7cefc9e7deb0e0bf422baa1a38a2c?s=128&d=identicon&r=PG",
+                "display_name": "Walker",
+                "link": "https://stackoverflow.com/users/364969/walker"
+            },
+            "is_answered": true,
+            "view_count": 7907800,
+            "protected_date": 1418673600,
+            "accepted_answer_id": 5767357,
+            "answer_count": 104,
+            "score": 9214,
+            "last_activity_date": 1615296748,
+            "creation_date": 1303597038,
+            "last_edit_date": 1590034803,
+            "question_id": 5767325,
+            "content_license": "CC BY-SA 4.0",
+            "link": "https://stackoverflow.com/questions/5767325/how-can-i-remove-a-specific-item-from-an-array",
+            "title": "How can I remove a specific item from an array?"
+        },
+        {
+            "tags": [
+                "git",
+                "version-control",
+                "git-branch"
+            ],
+            "owner": {
+                "reputation": 100671,
+                "user_id": 338204,
+                "user_type": "registered",
+                "accept_rate": 44,
+                "profile_image": "https://www.gravatar.com/avatar/c145a12cd17d3b3ffff033681a694abe?s=128&d=identicon&r=PG",
+                "display_name": "Forrest",
+                "link": "https://stackoverflow.com/users/338204/forrest"
+            },
+            "is_answered": true,
+            "view_count": 3292113,
+            "protected_date": 1498428177,
+            "accepted_answer_id": 6591218,
+            "answer_count": 34,
+            "score": 9200,
+            "last_activity_date": 1605331889,
+            "creation_date": 1309922436,
+            "last_edit_date": 1573954267,
+            "question_id": 6591213,
+            "content_license": "CC BY-SA 4.0",
+            "link": "https://stackoverflow.com/questions/6591213/how-do-i-rename-a-local-git-branch",
+            "title": "How do I rename a local Git branch?"
+        }
+    ],
+    "has_more": true,
+    "quota_max": 300,
+    "quota_remaining": 299
+}

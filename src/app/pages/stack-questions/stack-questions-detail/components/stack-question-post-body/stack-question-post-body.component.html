@@ -1,0 +1,131 @@
+<div class="row">
+    <div class="col-1 text-center">
+        <div>
+            <i class="fa fa-caret-up" aria-hidden="true"
+                style="font-size: 3.5rem; color: #cccccc; cursor: pointer;"></i>
+        </div>
+        <div>
+            <span style="font-size: 1.4; color:#6a737c">{{(model.up_vote_count ? model.up_vote_count : 0) -
+                (model.down_vote_count ?
+                model.down_vote_count : 0)}}</span>
+        </div>
+        <div>
+            <i class="fa fa-caret-down" aria-hidden="true"
+                style="font-size: 3.5rem; color: #cccccc; cursor: pointer;"></i>
+        </div>
+        <div *ngIf="model.is_accepted">
+            <i class="fa fa-check" aria-hidden="true"></i>
+        </div>
+        <div *ngIf="model.awarded_bounty_amount > 0">
+            <span class="award-bnt-amt">+{{model.awarded_bounty_amount}}</span>
+        </div>
+        <div *ngIf="model.favorite_count > 0">
+            <i class="fa fa-bookmark" aria-hidden="true" style="color: #cccccc; cursor: pointer;"></i>
+        </div>
+        <div *ngIf="model.favorite_count > 0">
+            <span style="color:#cccccc;margin-bottom: 3px;">{{model.favorite_count}}</span>
+        </div>
+        <div>
+            <i class="fa fa-clock-o" aria-hidden="true" style="color: #cccccc; cursor: pointer;"></i>
+        </div>
+    </div>
+    <div class="col-11">
+        <div class="post-content">
+            <div class="markdown-body" [innerHtml]="model.body | safeHtml"></div>
+            <div class="tags-info">
+                <div class="tags">
+                    <a class="post-tag" *ngFor="let tag of model.tags">{{tag}}</a>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-4">
+                    <span>
+                        <a class="seff" href="">Share</a>
+                    </span>
+                    <span>
+                        <a class="seff" href="">Edit</a>
+                    </span>
+                    <span>
+                        <a class="seff" href="">Follow</a>
+                    </span>
+                    <span>
+                        <a class="seff" href="">Flag</a>
+                    </span>
+                </div>
+                <div class="col-4">
+                    <ng-container *ngIf="model.last_editor">
+                        <div class="strtime"> {{model.last_edit_date | timelapse: 'update'}}</div>
+                        <div class="d-flex">
+                            <div class="ppic">
+                                <img [src]="model.last_editor.profile_image ? model.last_editor.profile_image : 'https://lh3.googleusercontent.com/-XdUIqdMkCWA/AAAAAAAAAAI/AAAAAAAAAAA/4252rscbv5M/photo.jpg?sz=32'"
+                                    alt="model.last_editor.display_name">
+                            </div>
+                            <div class="binfo">
+                                <a href="">{{model.last_editor.display_name}}</a>
+                                <div class="flair">
+                                    <span *ngIf="model.last_editor.reputation" class="reputation-score"
+                                        title="reputation score " dir="ltr">{{model.last_editor.reputation |
+                                        numberConvert}}</span>
+                                    <ng-container *ngIf="model.last_editor.badge_counts">
+                                        <span title="1 gold badge" aria-hidden="true"
+                                            *ngIf="model.last_editor.badge_counts.gold > 0">
+                                            <span class="badge1"></span>
+                                            <span class="badgecount">{{model.last_editor.badge_counts?.gold}}</span>
+                                        </span>
+                                        <span title="2 silver badges" aria-hidden="true"
+                                            *ngIf="model.last_editor.badge_counts.silver > 0">
+                                            <span class="badge2"></span>
+                                            <span class="badgecount">{{model.last_editor.badge_counts?.silver}}</span>
+                                        </span>
+                                        <span title="15 bronze badges" aria-hidden="true"
+                                            *ngIf="model.last_editor.badge_counts.bronze > 0">
+                                            <span class="badge3"></span>
+                                            <span class="badgecount">{{model.owner?.badge_counts?.bronze}}</span>
+                                        </span>
+                                    </ng-container>
+                                </div>
+                            </div>
+                        </div>
+                    </ng-container>
+
+                </div>
+                <div class="col-4 bgup">
+                    <div class="strtime"> {{model.creation_date | timelapse}}</div>
+                    <div class="d-flex">
+                        <div class="ppic">
+                            <img [src]="model.owner.profile_image ? model.owner.profile_image : 'https://lh3.googleusercontent.com/-XdUIqdMkCWA/AAAAAAAAAAI/AAAAAAAAAAA/4252rscbv5M/photo.jpg?sz=32'"
+                                alt="model.owner.display_name">
+                        </div>
+                        <div class="binfo">
+                            <a href="">{{model.owner.display_name}}</a>
+                            <div class="flair">
+                                <span *ngIf="model.owner.reputation" class="reputation-score" title="reputation score "
+                                    dir="ltr">{{model.owner.reputation |
+                                    numberConvert}}</span>
+                                <ng-container *ngIf="model.owner.badge_counts">
+                                    <span title="1 gold badge" aria-hidden="true"
+                                        *ngIf="model.owner.badge_counts.gold > 0">
+                                        <span class="badge1"></span>
+                                        <span class="badgecount">{{model.owner.badge_counts?.gold}}</span>
+                                    </span>
+                                    <span title="2 silver badges" aria-hidden="true"
+                                        *ngIf="model.owner.badge_counts.silver > 0">
+                                        <span class="badge2"></span>
+                                        <span class="badgecount">{{model.owner.badge_counts?.silver}}</span>
+                                    </span>
+                                    <span title="15 bronze badges" aria-hidden="true"
+                                        *ngIf="model.owner.badge_counts.bronze > 0">
+                                        <span class="badge3"></span>
+                                        <span class="badgecount">{{model.owner?.badge_counts?.bronze}}</span>
+                                    </span>
+                                </ng-container>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <br>
+            <app-stack-question-comments-list [comments]="model.comments"></app-stack-question-comments-list>
+        </div>
+    </div>
+</div>

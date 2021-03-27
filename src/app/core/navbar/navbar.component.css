@@ -1,0 +1,48 @@
+.-logo {
+  padding: 0 8px;
+}
+
+.-logo {
+  box-sizing: content-box;
+  padding: 0 12px;
+  height: 100%;
+  flex: 0.4 0 auto;
+  display: flex;
+  align-items: center;
+  background-color: transparent;
+}
+
+.-logo .-img {
+  display: inline-block;
+  text-indent: -9999em;
+  height: 30px;
+  width: 146px;
+  margin-top: -4px;
+  margin-left: 0;
+  background-position: 0 -500px;
+  background-image: url(https://cdn.sstatic.net/Img/unified/sprites.svg?v=fcc0ea44ba27);
+}
+
+
+.-logo .-img._glyph {
+  width: 150px;
+  height: 30px;
+  margin-top: -4px;
+  margin-left: 0;
+}
+
+
+.popover-input {
+  position: fixed;
+  left: 20%;
+  top: 60px;
+  background: ghostwhite;
+  width: 800px;
+  padding: 10px 10px 10px 20px;
+  z-index: 2000;
+  box-shadow: 0 0 5px 0px;
+}
+
+.tsl {
+  color: rgb(170, 170, 170);
+}

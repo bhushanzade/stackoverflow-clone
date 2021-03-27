@@ -1,0 +1,79 @@
+<div class="row">
+    <div class="col-8">
+        <div class="home-content">
+            <div class="section-1">
+                <button class="btn btn-primary float-right">Ask Question</button>
+                <h1>Top Questions</h1>
+            </div>
+            <div class="section-2 mt-4">
+                <div class="float-right">
+                    <ul class="navbar-items">
+                        <li [ngClass]="{'selected':tab === 'interesting'}"> <a
+                                (click)="onChangeTab('interesting')">Interesting</a> </li>
+                        <li [ngClass]="{'selected':tab === 'bounties'}"> <a (click)="onChangeTab('bounties')">Bountied</a> </li>
+                        <li [ngClass]="{'selected':tab === 'hot'}"> <a (click)="onChangeTab('hot')">Hot</a> </li>
+                        <li [ngClass]="{'selected':tab === 'week'}"> <a (click)="onChangeTab('week')">Week</a> </li>
+                        <li [ngClass]="{'selected':tab === 'month'}"> <a (click)="onChangeTab('month')">Month</a> </li>
+                    </ul>
+                </div>
+            </div>
+            <br>
+            <hr>
+            <div class="section-3">
+                <div class="question" *ngFor="let item of allQuestions">
+                    <div class="row">
+                        <div class="col-3">
+                            <div class="d-flex">
+                                <div class="b-block">
+                                    <div class="q-cnt">
+                                        {{(item.up_vote_count ? item.up_vote_count : 0) - (item.down_vote_count ?
+                                        item.down_vote_count : 0)}}
+                                    </div>
+                                    <div class="qsubtitle">
+                                        vote
+                                    </div>
+                                </div>
+                                <div class="b-block">
+                                    <div class="q-cnt">
+                                        {{item.answer_count}}
+                                    </div>
+                                    <div class="qsubtitle">
+                                        answers
+                                    </div>
+                                </div>
+                                <div class="b-block">
+                                    <div class="q-cnt">
+                                        {{item.view_count | numberConvert}}
+                                    </div>
+                                    <div class="qsubtitle">
+                                        views
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-9">
+                            <div class="qtitle">
+                                <a [routerLink]="['./questions',item.question_id]">{{item.title}}</a>
+                            </div>
+                            <div class="tags-info">
+        
+                                <div class="tags">
+                                    <a class="post-tag"
+                                        *ngFor="let tag of item.tags">{{tag}}</a>
+                                </div>
+                                <div class="d-flex float-right">
+                                    <div class="strtime">{{item.creation_date | timelapse}}</div>
+                                    <a class="name">{{item.owner.display_name}}</a>
+                                    <span class="reputation">{{item.owner.reputation | numberConvert}}</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="col-4">
+        <app-right-sidebar></app-right-sidebar>
+    </div>
+</div>

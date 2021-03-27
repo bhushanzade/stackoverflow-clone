@@ -1,0 +1,184 @@
+<div class="row">
+    <div class="col-8">
+        <div class="">
+            <div class="content">
+                <div class="section-title">
+                    <div class="float-right">
+                        <a href="javascript:void(0);" class="mr-3" style="font-size: 14px;"
+                            (click)="advanceSearchTips = !advanceSearchTips">Advance Search Tips</a>
+                        <button class="btn btn-primary">Ask Question</button>
+                    </div>
+                    <h3>Search Results</h3>
+                </div>
+                <div class="result-search">
+                    <table class="table" *ngIf="advanceSearchTips">
+                        <thead>
+                            <tr>
+                                <th scope="col" width="20%">Search type</th>
+                                <th scope="col">Search syntax</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td scope="row">Tags</td>
+                                <td class="ff-mono">[tag]</td>
+                            </tr>
+                            <tr>
+                                <td scope="row">Exact</td>
+                                <td class="ff-mono">"words here"</td>
+                            </tr>
+                            <tr>
+                                <td scope="row">Author</td>
+                                <td class="ff-mono">
+                                    user:1234<br>
+                                    user:me <span class="fc-light">(yours)</span>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td scope="row">Score</td>
+                                <td class="ff-mono">
+                                    score:3 <span class="fc-light">(3+)</span><br>
+                                    score:0 <span class="fc-light">(none)</span>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td scope="row">Answers</td>
+                                <td class="ff-mono">
+                                    answers:3 <span class="fc-light">(3+)</span><br>
+                                    answers:0 <span class="fc-light">(none)</span><br>
+                                    isaccepted:yes<br>
+                                    hasaccepted:no<br>
+                                    inquestion:1234
+                                </td>
+                            </tr>
+                            <tr>
+                                <td scope="row">Views</td>
+                                <td class="ff-mono">views:250</td>
+                            </tr>
+                            <tr>
+                                <td scope="row">Code</td>
+                                <td class="ff-mono">code:"if (foo != bar)"</td>
+                            </tr>
+                            <tr>
+                                <td scope="row">Sections</td>
+                                <td class="ff-mono">
+                                    title:apples<br>
+                                    body:"apples oranges"
+                                </td>
+                            </tr>
+                            <tr>
+                                <td scope="row">URL</td>
+                                <td class="ff-mono">url:"*.example.com"</td>
+                            </tr>
+                            <tr>
+                                <td scope="row">Bookmarks</td>
+                                <td class="ff-mono">
+                                    inbookmarks:mine<br>
+                                    inbookmarks:1234
+                                </td>
+                            </tr>
+                            <tr>
+                                <td scope="row">Status</td>
+                                <td class="ff-mono">
+                                    closed:yes<br>
+                                    duplicate:no<br>
+                                    migrated:no<br>
+                                    wiki:no
+                                </td>
+                            </tr>
+                            <tr>
+                                <td scope="row">Types</td>
+                                <td class="ff-mono">
+                                    is:question<br>
+                                    is:answer
+                                    <br>is:article
+                                </td>
+                            </tr>
+                            <tr>
+                                <td scope="row">Exclude</td>
+                                <td class="ff-mono">
+                                    -[tag]<br>
+                                    -apples
+                                </td>
+                            </tr>
+                            <tr>
+                                <td colspan="2" class="">
+                                    For more details on advanced search <a
+                                        href="https://stackoverflow.com/help/searching">visit our help page</a>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <span class="result-search-t">Results for {{paramsModel.q}} <span
+                            *ngIf="searchedTags.length > 0">tagged with &nbsp; <a class="post-tag"
+                                *ngFor="let tag of searchedTags">{{tag}}</a></span> </span>
+                    <div class="mt-2">
+                        <app-search-bar [noPopover]="true"></app-search-bar>
+                    </div>
+                </div>
+                <div class="section-filter mt-4">
+                    <ul class="navbar-items float-right">
+                        <li [ngClass]="{'selected':tab === 'relevance'}"> <a
+                                (click)="onChangeTab('relevance')">Relevance</a>
+                        </li>
+                        <li [ngClass]="{'selected':tab === 'creation'}"> <a (click)="onChangeTab('creation')">Newest</a>
+                        </li>
+                        <li [ngClass]="{'selected':tab === 'activity'}"> <a (click)="onChangeTab('activity')">Active</a>
+                        </li>
+                        <li [ngClass]="{'selected':tab === 'votes'}"> <a (click)="onChangeTab('votes')">Votes</a> </li>
+                    </ul>
+                    <p style="font-size: 1.30769231rem; margin-right: 12px; ">{{totalCnt}} results</p>
+                </div>
+                <hr>
+                <div class="no-items" *ngIf="totalCnt === 0">
+                    <h1>No Results Avaialable. Please try again.</h1>
+                </div>
+                <div class="questions"
+                    *ngFor="let item of allItems | paginate: {itemsPerPage: pageSize, currentPage: pageNo,totalItems: totalCnt} ; let i=index">
+                    <div class="row">
+                        <div class="col-1">
+                            <div class="qcnt">{{(item.up_vote_count ? item.up_vote_count : 0) - (item.down_vote_count ?
+                                item.down_vote_count : 0)}}</div>
+                            <div class="ctitl">Votes</div>
+                            <div class="qcnt mt-3">{{item.answer_count}}</div>
+                            <div class="ctitl">Answers</div>
+                        </div>
+                        <div class="col-11">
+                            <div class="qtitle">
+                                <a [routerLink]="['./',item.question_id]">Q: {{item.title}}</a>
+                            </div>
+                            <div class="qdesc">
+                                {{item.body | ellipsis}}
+                            </div>
+                            <div class="tags-info">
+                                <div class="strtime float-right mr-2"> {{item.creation_date | timelapse}} by <a
+                                        href="">{{item.owner.display_name}}</a></div>
+                                <div class="tags">
+                                    <a class="post-tag" *ngFor="let tag of item.tags">{{tag}}</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <br>
+                <div class="paged" style="margin: 0 -40px;" *ngIf="totalCnt > 0">
+                    <div class="page-sizes float-right">
+                        <span class="ml-2 float-right">per page</span>
+                        <ul class="float-left">
+                            <li (click)="pageSizeChanged(15)" [ngClass]="{'current':pageSize == 15}">15</li>
+                            <li (click)="pageSizeChanged(30)" [ngClass]="{'current':pageSize == 30}">30</li>
+                            <li (click)="pageSizeChanged(50)" [ngClass]="{'current':pageSize == 50}">50</li>
+                        </ul>
+                    </div>
+                    <pagination-controls (pageChange)="pageChanged($event)" maxSize="9" autoHide="true"
+                        responsive="true" previousLabel="Prev" nextLabel="Next" screenReaderPaginationLabel="Pagination"
+                        screenReaderPageLabel="page" screenReaderCurrentLabel="You're on page">
+                    </pagination-controls>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="col-4">
+        <app-right-sidebar></app-right-sidebar>
+    </div>
+</div>

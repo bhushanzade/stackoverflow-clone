@@ -1,0 +1,115 @@
+.home-content .section-1 h1 {
+  font-size: 1.8rem;
+  font-weight: 400;
+}
+
+.section-2 ul.navbar-items li
+
+/* Important part */
+  {
+  display: inline;
+  padding: 5px 20px;
+  border-top: 1px solid rgb(139, 139, 139);
+  border-left: 1px solid rgb(139, 139, 139);
+  border-bottom: 1px solid rgb(139, 139, 139);
+  cursor: pointer;
+}
+
+.section-2 li a {
+  text-decoration: none;
+  color: gray;
+}
+
+.section-2 ul.navbar-items li:first-child {
+  border-radius: 3px 0 0 3px !important;
+}
+
+.section-2 ul.navbar-items li:last-child {
+  border-radius: 0 3px 3px 0 !important;
+  border-right: 1px solid rgb(139, 139, 139);
+}
+
+hr {
+  margin-left: -25px;
+}
+
+.section-3 {}
+
+.section-3 .question {
+  /* background: #fdf7e3; */
+  margin-top: -16px;
+  margin-left: -24px;
+  padding: 15px;
+  border-bottom: 1px solid #eff0f1;
+  margin-bottom: 5px;
+}
+
+.section-3 .question .b-block {
+  display: inline-block;
+  height: 38px;
+  min-width: 38px;
+  margin: 0 3px 0 0;
+  font-size: 11px;
+  color: #848d95;
+  padding: 6px;
+  text-align: center;
+}
+
+.section-3 .question .b-block .q-cnt {
+  font-size: 17px;
+  line-height: 1;
+  font-weight: 400;
+  margin-bottom: 4px;
+}
+
+.section-3 .question .b-block .qsubtitle {
+  font-size: 12px;
+  font-weight: 400;
+}
+
+.question .tags-info .tags {
+  line-height: 18px;
+  float: left;
+}
+
+.question .tags-info .tags .post-tag {
+  font-size: 12px;
+  color: #39739d;
+  background: #e1ecf4;
+  display: inline-block;
+  padding: .4em .5em;
+  margin: 2px 8px 2px 0;
+  line-height: 1;
+  white-space: nowrap;
+  text-decoration: none;
+  text-align: center;
+  border-width: 1px;
+  border-style: solid;
+  border-radius: 3px;
+  border-color: #00000000;
+}
+
+.question .strtime{
+    font-size: 12px;
+    color: #9199a1;
+    margin-top: 5px;
+    margin-right: 5px;
+}
+
+.question .name{
+    font-size: 12px;
+    margin-top: 5px;
+    margin-right: 5px;
+}
+
+.question .reputation{
+    color: #848d95;
+    font-weight: bold;
+    font-size: 12px;
+    margin-top: 5px;
+    margin-right: 5px;
+}
+
+.navbar-items .selected{
+    background: #e4e6e8 !important;
+}

@@ -1,0 +1,15 @@
+.popover-input {
+    position: fixed;
+    left: 20%;
+    top: 60px;
+    background: ghostwhite;
+    width: 800px;
+    padding: 10px 10px 10px 20px;
+    z-index: 2000;
+    box-shadow: 0 0 5px 0px;
+  }
+  
+  .tsl {
+    color: rgb(170, 170, 170);
+  }
+  

@@ -1,0 +1,53 @@
+.r-sidebar {}
+
+.r-sidebar .section-1 {
+  background-color: #fdf7e3;
+  border-color: #f1e5bc;
+  border: 1px solid #f1e5bc;
+}
+
+.r-sidebar .section-1 .section-title {
+  font-size: 12px;
+  font-weight: bold;
+  background-color: #fbf2d4;
+  border-color: #f1e5bc;
+  padding: 12px 15px;
+  border-top: 1px solid #f1e5bc;
+  border-bottom: 1px solid #f1e5bc;
+}
+
+p {
+  margin: 0;
+  margin-bottom: 5px;
+}
+
+.r-sidebar .section-1 .section-list {
+  padding-left: 16px !important;
+  padding-right: 16px !important;
+  margin-top: 10px;
+}
+
+.r-sidebar .section-1 .section-list .fa {
+  margin-right: 12px;
+  font-size: 14px;
+}
+
+.r-sidebar .section-1 .section-list p {
+  word-wrap: break-word;
+  font-size: 14px;
+}
+
+.favicon-stackexchangemeta {
+  background-position: 0 -5976px;
+  margin-right: 12px;
+  margin-top: 5px;
+}
+
+.favicon {
+  width: 16px;
+  height: 16px;
+  background-color: transparent;
+  background-repeat: no-repeat;
+  background-size: 16px;
+  background-image: url(https://cdn.sstatic.net/Img/favicons-sprite16.png?v=40878c5b98a5);
+}

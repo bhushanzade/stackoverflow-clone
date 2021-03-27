@@ -1,0 +1,40 @@
+<div class="main-content">
+    <div class="section-1">
+        <h1>{{model.title}}</h1>
+        <div class="d-flex">
+            <span class="ln">Asked</span>
+            <span class="lns"> {{model.creation_date | timelapse: 'onlyago'}}</span>
+            <span class="ml-3 ln">Active</span>
+            <span class="lns">6 months ago</span>
+            <span class="ml-3 ln">Viewed</span>
+            <span class="lns">{{model.view_count | numberConvert}} times</span>
+        </div>
+        <hr>
+    </div>
+    <div class="section-2">
+        <div class="row">
+            <div class="col-8">
+                <app-stack-question-post-body [model]="model"></app-stack-question-post-body>
+                <div class="ans-header">
+                    <ul class="navbar-items float-right">
+                        <li [ngClass]="{'selected':ans_sort === 'activity'}"> <a
+                                (click)="onChangeSortFilter('activity')">Active</a> </li>
+                        <li [ngClass]="{'selected':ans_sort === 'creation'}"> <a
+                                (click)="onChangeSortFilter('creation')">Oldest</a> </li>
+                        <li [ngClass]="{'selected':ans_sort === 'votes'}"> <a
+                                (click)="onChangeSortFilter('votes')">Votes</a> </li>
+                    </ul>
+                    <h2>
+                        {{answers.length}} Answers
+                    </h2>
+                </div>
+                <div class="ans-list" *ngFor="let item of answers">
+                    <app-stack-question-post-body [model]="item"></app-stack-question-post-body>
+                </div>
+            </div>
+            <div class="col-4">
+                <app-right-sidebar></app-right-sidebar>
+            </div>
+        </div>
+    </div>
+</div>

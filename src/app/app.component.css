@@ -1,0 +1,36 @@
+.content {
+    padding: 0 50px;
+  }
+  
+  
+  #content {
+    max-width: 1100px;
+    width: calc(100% - 164px);
+    background-color: #fff;
+    border-radius: 0;
+    border: 1px solid #d6d9dc;
+    border-top-width: 0;
+    border-bottom-width: 0;
+    border-left-width: 1px;
+    border-right-width: 0;
+    padding: 24px;
+    box-sizing: border-box;
+    box-sizing: content-box;
+    margin: 0 auto;
+  }
+  
+  #content {
+    width: calc(100% - 164px);
+    background-color: #fff;
+    border-radius: 0;
+    border: 1px solid #d6d9dc;
+    border-top-width: 0;
+    border-bottom-width: 0;
+    border-left-width: 1px;
+    border-right-width: 0;
+    padding: 24px;
+    box-sizing: border-box;
+    box-sizing: content-box;
+    margin-left: 164px;
+  }
+  

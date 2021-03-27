@@ -1,0 +1,26 @@
+.post-comments {}
+
+.post-comments .comment-body {
+  border-top: 1px solid #e4e6e8;
+}
+
+.post-comments .comment-body p {
+  word-wrap: break-word;
+  font-size: 14px;
+  margin: 0;
+  margin-left: 10px;
+  color: black;
+}
+
+.post-comments .comment-body p .cauthor {
+  color: #0077cc;
+  text-decoration: none;
+  cursor: pointer;
+  margin-right: 5px;
+  
+}
+
+.post-comments .comment-body p .cdate {
+  color: #9199a1;
+  margin-right: 5px;
+}

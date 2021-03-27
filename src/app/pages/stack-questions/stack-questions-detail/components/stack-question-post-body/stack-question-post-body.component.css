@@ -1,0 +1,148 @@
+.tags-info .tags {
+  line-height: 18px;
+  margin-bottom: 12px;
+  margin-top: 24px;
+}
+
+.tags-info .tags .post-tag {
+  font-size: 12px;
+  color: #39739d;
+  background: #e1ecf4;
+  display: inline-block;
+  padding: .4em .5em;
+  margin: 2px 8px 2px 0;
+  line-height: 1;
+  white-space: nowrap;
+  text-decoration: none;
+  text-align: center;
+  border-width: 1px;
+  border-style: solid;
+  border-radius: 3px;
+  border-color: #00000000;
+}
+
+.ppic {
+  width: 32px;
+  height: 32px;
+  border-radius: 1px;
+  margin-right: 10px;
+}
+
+.ppic img {
+  width: 32px;
+  height: 32px;
+}
+
+.strtime {
+  font-size: 12px;
+  color: #6a737c;
+  margin-top: 1px;
+  margin-bottom: 4px;
+  white-space: nowrap;
+}
+
+.binfo {
+  line-height: 17px;
+  word-wrap: break-word;
+  margin-top: -3px;
+}
+
+.binfo a {
+  font-size: 12px;
+}
+
+.binfo .flair .reputation-score {
+  color: #6a737c;
+  font-weight: bold;
+  font-size: 12px;
+  margin-right: 2px;
+}
+
+.flair>span:not(.reputation-score) {
+  margin-right: 3px;
+  margin-left: 2px;
+}
+
+
+.badge1,
+.badge2,
+.badge3 {
+  display: inline-block;
+  margin-right: 3px;
+  margin-left: 2px;
+  width: 6px;
+  line-height: inherit;
+  vertical-align: text-bottom;
+  height: 14px;
+  background-size: initial;
+  background-repeat: no-repeat;
+  overflow: hidden;
+}
+
+.badgecount {
+  font-weight: 400;
+  font-size: 12px;
+  padding-left: 0;
+  color: #9199a1;
+}
+
+.badge1 {
+  background-position: -102px -398px;
+  background-image: url(https://cdn.sstatic.net/Img/unified/sprites.svg?v=fcc0ea44ba27), none;
+}
+
+.badge2 {
+  background-position: -82px -398px;
+  background-image: url(https://cdn.sstatic.net/Img/unified/sprites.svg?v=fcc0ea44ba27), none;
+}
+
+.badge3 {
+  background-position: -62px -398px;
+  background-image: url(https://cdn.sstatic.net/Img/unified/sprites.svg?v=fcc0ea44ba27), none;
+}
+
+.bgup {
+  background-color: #d5e7f3;
+  border-radius: 3px;
+  margin-bottom: 5px;
+  padding: 5px 5px 20px 10px;
+}
+
+a.seff {
+  color: #6a737c !important;
+  font-size: 12px !important;
+  margin-right: 5px !important;
+}
+
+.ans-header {
+  margin-top: 30px;
+}
+
+.ans-header h2 {
+  font-weight: 600;
+  font-size: 18px;
+}
+
+.award-bnt-amt {
+  background: #0077cc;
+  color: white;
+  min-width: 18px;
+  padding-right: 4px;
+  padding-left: 4px;
+  font-size: 11px;
+  line-height: 1.8;
+  align-content: center;
+  justify-content: center;
+  border-radius: 3px;
+}
+
+.col-1 {
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
+.fa-check {
+  font-size: 2rem !important;
+  color: #48a868;
+  margin-bottom: 5px;
+}

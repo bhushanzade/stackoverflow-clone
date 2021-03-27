@@ -1,0 +1,39 @@
+<div class="d-flex">
+    <input class="form-control mr-sm-2" [(ngModel)]="searchModel" (change)="setInputSearch($event)"
+        (focus)="popover = !popover" (focusout)="popover = !popover" type="text" placeholder="Search"
+        style="width: 800px;">
+    <button (click)="goToSearch()" class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+</div>
+
+<div class="popover-input" *ngIf="popover && !noPopover">
+    <div class="row">
+        <div class="col-6">
+            <p>
+                [tag]
+                <span class="ml-1 tsl">
+                    search within a tag
+                </span>
+            </p>
+            <p>
+                "words here"
+                <span class="ml-1 tsl">
+                    exact phrase
+                </span>
+            </p>
+        </div>
+        <div class="col-6">
+            <p>
+                answers:0
+                <span class="ml-1 tsl">
+                    unanswered questions
+                </span>
+            </p>
+            <p>
+                isaccepted:yes
+                <span class="ml-1 tsl">
+                    search within status
+                </span>
+            </p>
+        </div>
+    </div>
+</div>

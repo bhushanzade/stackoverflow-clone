@@ -1,0 +1,123 @@
+.left-sidebar {
+  width: 164px;
+  flex-shrink: 0;
+  z-index: 1000;
+  box-shadow: 0 0 0 rgb(12 13 14 / 5%);
+  transition: box-shadow ease-in-out .1s, transform ease-in-out .1s;
+  position: fixed;
+  box-sizing: border-box;
+}
+
+.left-sidebar--sticky-container:not(.left-sidebar__fake-sticky) {
+  top: 50px;
+  max-height: calc(100vh - 50px);
+  position: sticky;
+  width: auto;
+  margin-bottom: 8px;
+  overflow-y: auto;
+}
+
+
+.left-sidebar--sticky-container {
+  padding-top: 24px;
+  top: 50px;
+  max-height: calc(100vh - 50px);
+  position: sticky;
+  width: auto;
+  margin-bottom: 8px;
+  overflow-y: auto;
+}
+
+.nav-links {
+  padding: 0;
+  margin: 0 0 12px;
+  list-style: none;
+}
+
+.nav-links .nav-links--link,
+.nav-links .nav-links--link:visited {
+  color: #535a60;
+}
+
+.nav-links .nav-links--link {
+  display: block;
+  padding: 4px;
+  line-height: 1.8;
+  font-size: 13px;
+  padding-left: 8px;
+}
+
+a {
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.ai-center {
+  align-items: center !important;
+}
+
+.truncate {
+  overflow: hidden;
+  max-width: 100%;
+  text-overflow: ellipsis !important;
+  white-space: nowrap;
+}
+
+.tt-uppercase {
+  text-transform: uppercase !important;
+}
+
+.fc-light {
+  color: #6a737c !important;
+}
+
+.fs-fine {
+  font-size: 11px !important;
+}
+
+.ml8 {
+  margin-left: 8px !important;
+}
+
+.mb4 {
+  margin-bottom: 4px !important;
+}
+
+.mt16 {
+  margin-top: 16px !important;
+}
+
+.homeactive {
+  font-weight: bold;
+  background: #eff0f1;
+  color: #0C0D0D;
+  border-right: 3px solid #f48024;
+}
+
+.nav-links .nav-links--link.-link__with-icon {
+  display: flex;
+  padding: 8px 6px 8px 0;
+}
+
+.nav-links .nav-links--link.-link__with-icon .svg-icon {
+  flex-shrink: 0;
+  margin-top: -1px;
+  margin-right: 4px;
+  color: #0c0d0e;
+}
+
+.nav-links .nav-links--link .-link--channel-name {
+  line-height: 1.30769231;
+}
+
+.nav-links .nav-links--link {
+  display: block;
+  padding: 4px;
+  padding-left: 30px;
+  line-height: 1.8;
+  font-size: 13px;
+}
+
+.pl8 {
+  padding-left: 8px !important;
+}
